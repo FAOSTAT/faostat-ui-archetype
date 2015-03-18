@@ -1,2 +1,2 @@
-# faostat-ui-archetype
-FAOSTAT UI Archetype
+# FAOSTAT UI Archetype
+Structure to be used by FAOSTAT UI projects.
