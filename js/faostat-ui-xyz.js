@@ -2,9 +2,10 @@ define(['jquery',
         'handlebars',
         'text!faostat_ui_xyz/html/templates.html',
         'i18n!faostat_ui_xyz/nls/translate',
+        'FAOSTAT_UI_COMMONS',
         'bootstrap',
         'sweetAlert',
-        'amplify'], function ($, Handlebars, templates, translate) {
+        'amplify'], function ($, Handlebars, templates, translate, Commons) {
 
     'use strict';
 
@@ -12,7 +13,8 @@ define(['jquery',
 
         this.CONFIG = {
 
-            lang: 'E',
+            lang: 'en',
+            lang_faostat: 'E',
             placeholder_id: 'faostat_ui_xyz',
             prefix: 'faostat_ui_xyz_'
 
@@ -26,7 +28,10 @@ define(['jquery',
         this.CONFIG = $.extend(true, {}, this.CONFIG, config);
 
         /* Fix the language, if needed. */
-        this.CONFIG.lang = this.CONFIG.lang != null ? this.CONFIG.lang : 'E';
+        this.CONFIG.lang = this.CONFIG.lang != null ? this.CONFIG.lang : 'en';
+
+        /* Store FAOSTAT language. */
+        this.CONFIG.lang_faostat = Commons.iso2faostat(this.CONFIG.lang);
 
     };
 
