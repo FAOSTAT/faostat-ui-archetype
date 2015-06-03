@@ -1,3 +1,4 @@
+/* global define */
 define({
     root : {
         error: 'FAOSTAT XYZ Error'

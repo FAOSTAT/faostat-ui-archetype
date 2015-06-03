@@ -1,6 +1,10 @@
+/* global define */
 define(function() {
 
-    var config = {
+    'use strict';
+
+    var config;
+    config = {
         paths: {
             FAOSTAT_UI_XYZ: 'faostat-ui-xyz',
             faostat_ui_xyz: '../'
