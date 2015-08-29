@@ -1,6 +1,7 @@
+/* global define */
 define({
     root : {
-        error: '[MODULE NAME] Error'
+        error: 'FAOSTAT XYZ Error'
     },
     fr : true,
     es : true
